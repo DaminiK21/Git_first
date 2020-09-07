@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 127.023 s <<< FAILURE! - in TestSuite
+Scratch.E2E_project.Schedule.Schedule_screen  Time elapsed: 16.158 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Method public void Scratch.E2E_project.Schedule.Schedule_screen() throws java.io.IOException,java.lang.InterruptedException requires a @DataProvider named : data_prov
+
+Scratch.E2E_project.Message_on_employee_screen.Message  Time elapsed: 63.961 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using xpath=//div[@class='spark-carousel__item ng-scope selected']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-KNHH4CE3', ip: '192.168.2.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver
+	at Scratch.E2E_project.Message_on_employee_screen.Message(Message_on_employee_screen.java:45)
+
+Scratch.E2E_project.Message_on_employee_screen.closeBrowser  Time elapsed: 73.056 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=85.0.4183.83)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-KNHH4CE3', ip: '192.168.2.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\DK\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:63417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 10a09ee99a4fe55d45bef6ba297f70a7
+	at Scratch.E2E_project.Message_on_employee_screen.closeBrowser(Message_on_employee_screen.java:67)
+

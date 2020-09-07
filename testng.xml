@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+
+<listener class-name="Scratch.E2E_project.listiners"/>
+<listener class-name="Resources.ExtentReporterTestng">
+</listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Scratch.E2E_project.Home_page"/>
+      </classes>
+      </test>
+      <test name="Test2">
+      
+      <classes>
+      <class name="Scratch.E2E_project.Schedule"/>
+      </classes></test>
+      <test name="Test3">
+      
+      <classes>
+      <class name="Scratch.E2E_project.Message_on_employee_screen"/>
+      </classes></test>
+      <test name="Test4">
+      
+      <classes>
+      <class name="Scratch.E2E_project.AppTest"/>
+      </classes></test>
+      
+      
+<!-- Test -->
+</suite> <!-- Suite -->
