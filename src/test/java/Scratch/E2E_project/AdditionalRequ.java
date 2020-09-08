@@ -2,6 +2,8 @@ package Scratch.E2E_project;
 
 import java.io.IOException;
 
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -21,49 +23,26 @@ public class AdditionalRequ extends Base_class {
 		AdditionalPom add_req=new AdditionalPom(driver);
 
 	add_req.Action_button();
+	add_req.addMenu();
+	add_req.Date();
+	add_req.nextBtn();
 	
-	driver.findElement(By.xpath("")).click();
-	System.out.println("Click on Additional request button");
 	
-	driver.findElement(By.xpath("//*[@id='mainContainerDiv']/ng-view/sc-additional-requests/div/div[3]/div/div[2]/div[1]/fieldset/label/span")).click();
-	System.out.println("Select date from list");
-	
-	//Thread.sleep(5000);
-	
-	driver.findElement(By.xpath("//*[@id='mainContainerDiv']/ng-view/sc-additional-requests/div/div[4]/button[1]")).click();
-	System.out.println("Click on next button");
-	
-	Select drop1=new Select(driver.findElement(By.xpath("//*[@id='additional-request-summary']/div[4]/div[1]/div[2]/select")));
+	Select drop1=new Select(add_req.Selectanomaly());
 	drop1.selectByIndex(2);
 	System.out.println("select anomonaly request");
 	
+	add_req.submitBtn();
+	add_req.Cancel1Btn();
+	add_req.Cancel2Btn();
 	
-	/*driver.findElement(By.xpath("//*[@id='additional-request-summary']/div[5]/button[1]")).click();
-	System.out.println("Click on Submit button button");*/
-	
-	
-/*	Thread.sleep(2000);
-	
-	driver.findElement(By.xpath("//*[@id='additional-request-summary']/div[5]/button[2]")).click();
-	System.out.println("Click on Cancel button button");
-	
-	driver.findElement(By.xpath("//*[@id='mainContainerDiv']/ng-view/sc-additional-requests/div/div[4]/button[2]")).click();
-	System.out.println("Click on Cancel button button on Additional Requests screen");
-	
-	System.out.println(driver.getCurrentUrl());
-	
-	System.out.println("all operations prrform in staffConnect");*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	Thread.sleep(5000);
 	driver.close();
 	
 	}
+	
+	@AfterTest
+	public void close()
+	{
+		driver.close();
+		
 }
