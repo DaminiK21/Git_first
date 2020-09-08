@@ -49,7 +49,7 @@ public class Schedule  extends Base_class{
 	//Assert.assertFalse(sch.sch_menu().isDisplayed());
 	//driver.navigate().refresh();
    Exp_wait.until(ExpectedConditions.elementToBeClickable(sch.sch_menu()));
-    sch.sch_menu().click();
+    sch.sch_menu();
 	
 	if(sch.Collpase().isDisplayed())
 	{

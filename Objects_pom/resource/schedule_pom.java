@@ -40,6 +40,8 @@ public class schedule_pom {
 	
 	public WebElement sch_menu()
 	{
+		Schedule_menu.click();
+		
 		return Schedule_menu;
 	}
 	
