@@ -1,5 +1,6 @@
 package resource;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,8 +34,9 @@ public class schedule_pom {
 	WebElement Calendar1 ;
 	@FindBy(xpath="//div[@class='spark-calendar__overflow']")
 	WebElement Start_date ;
-	@FindBy(xpath="//a[@class='spark-calendar__day spark-calendar__range-last']\r\n")
-	WebElement list1 ;
+	
+	By  list1=By.xpath("//a[@class='spark-calendar__day spark-calendar__range-last']\r\n");
+	
 	
 	
 	public WebElement sch_menu()
@@ -73,6 +75,7 @@ public class schedule_pom {
 	
 	public WebElement List1()
 	{
-		return list1;
+		driver.findElements(list1);
+		return (WebElement) list1;
 	}
 }
