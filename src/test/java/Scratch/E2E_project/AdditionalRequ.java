@@ -44,5 +44,6 @@ public class AdditionalRequ extends Base_class {
 	public void close()
 	{
 		driver.close();
-		
+		driver =null;
+	}
 }
